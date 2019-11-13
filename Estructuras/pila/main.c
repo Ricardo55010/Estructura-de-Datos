@@ -1,4 +1,4 @@
-#include"listal.h"
+#include"cola.h"
 
 int
 main ()
@@ -9,8 +9,7 @@ main ()
   do
     {
 
-      printf
-	("que desea realizar \n1.Agregar 2.Eliminar 3.Mostrar 4.Salir \n ");
+      printf ("\nQue desea realizar \n1.Push 2.Pop 3.Mostrar 4.Salir \n ");
 
       scanf ("%d", &opcion);
 

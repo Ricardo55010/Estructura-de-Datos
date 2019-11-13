@@ -10,7 +10,7 @@ main ()
     {
 
       printf
-	("que desea realizar \n1.Agregar 2.Eliminar 3.Mostrar 4.Salir \n ");
+	("\nque desea realizar \n1.Agregar 2.Eliminar 3.Mostrar 4.Salir \n ");
 
       scanf ("%d", &opcion);
 

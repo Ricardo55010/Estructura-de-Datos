@@ -41,8 +41,28 @@ eliminarLista (struct head *head)
     }
   else
     {
-      head = head->siguiente;
-      head->anterior = NULL;
+      if (head->siguiente == NULL)
+	{
+	  head = NULL;
+	  printf ("Ha vaciado la lista");
+	  return head;
+	}
+      else
+	{
+	  nodo = head;
+	  nodo2 = head;
+	  while (nodo->siguiente != NULL)
+	    {
+	      nodo = nodo->siguiente;
+	    }
+	  while (nodo2->siguiente != nodo)
+	    {
+	      nodo2 = nodo2->siguiente;
+	    }
+
+	  nodo2->siguiente = NULL;
+	  return head;
+	}
     }
 
 
@@ -64,7 +84,7 @@ mostrarLista (struct head *head)
       nodo = head;
       while (nodo != NULL)
 	{
-	  printf ("%d\n ", nodo->dato);
+	  printf ("%d ", nodo->dato);
 	  nodo = nodo->siguiente;
 
 	}

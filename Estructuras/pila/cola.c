@@ -1,4 +1,4 @@
-#include"listal.h"
+#include"cola.h"
 struct head *
 agregarLista (struct head *head, int dato)
 {
@@ -41,7 +41,7 @@ eliminarLista (struct head *head)
       if (head->siguiente == NULL)
 	{
 	  head = NULL;
-	  printf ("Ha vaciado la lista");
+	  printf ("Ha vaciado la cola");
 	  return head;
 	}
       else
@@ -63,7 +63,7 @@ eliminarLista (struct head *head)
 	  return head;
 	}
     }
-return head;
+  return head;
 }
 
 struct head *
