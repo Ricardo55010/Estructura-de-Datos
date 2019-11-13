@@ -1,4 +1,4 @@
-#include"pila.h"
+#include"cola.h"
 
 int
 main ()
