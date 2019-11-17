@@ -3,8 +3,7 @@
 int
 main (void)
 {
-  struct lista lista;
-  lista.tamano = 1;
+  struct lista *lista = NULL;
   int numero = 0;
   int opcion = 0;
   do
@@ -18,13 +17,13 @@ main (void)
 	case 1:
 	  printf ("Ingrese el numero a agregar\n");
 	  scanf ("%d", &numero);
-	  agregarLista (&lista, numero);
+	  lista = agregarLista (lista, numero);
 	  break;
 	case 2:
-	  eliminarLista (&lista);
+	  lista = eliminarLista (lista);
 	  break;
 	case 3:
-	  mostrarLista (&lista);
+	  mostrarLista (lista);
 	  break;
 	case 4:
 	  printf ("Saliendo del programa\n");

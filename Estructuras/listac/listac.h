@@ -13,7 +13,7 @@ struct lista
 
 };
 
-int agregarLista (struct lista *, int);
-int eliminarLista (struct lista *);
-int mostrarLista (struct lista *);
+struct lista *agregarLista (struct lista *, int);
+struct lista *eliminarLista (struct lista *);
+struct lista *mostrarLista (struct lista *);
 #endif
