@@ -1,5 +1,5 @@
-#ifndef __LISTAL_H__
-#define __LISTAL_H__
+#ifndef __LISTADL_H__
+#define __LISTADL_H__
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>

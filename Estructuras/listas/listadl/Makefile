@@ -1,13 +1,13 @@
-a.out: main.o listal.o 
-	gcc main.o listal.o 
+a.out: main.o listaDoblementeLigada.o 
+	gcc main.o listaDoblementeLigada.o 
 main.o: main.c
 	gcc -c -Wall main.c
-listal.o: listal.c
-	gcc -c -Wall listal.c
+listaDoblementeLigada.o: listaDoblementeLigada.c
+	gcc -c -Wall listaDoblementeLigada.c
 run: a.out
 	./a.out
 clear:
-	rm -fr a.out main.o listal.o listal.c~ listal.h~ main.c~
+	rm -fr a.out main.o listaDoblementeLigada.o listaDoblementeLigada.c~ listaDoblementeLigada.h~ main.c~
 indent: 
-	indent main.c listal.c listal.h 
+	indent main.c listaDoblementeLigada.c listaDoblementeLigada.h 
 

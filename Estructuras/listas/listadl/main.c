@@ -1,4 +1,4 @@
-#include"listal.h"
+#include"listaDoblementeLigada.h"
 
 int
 main ()
