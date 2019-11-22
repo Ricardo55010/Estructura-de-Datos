@@ -1,6 +1,6 @@
 #include"pila.h"
 struct head *
-agregarLista (struct head *head, int dato)
+push (struct head *head, int dato)
 {
   struct head *nuevo = (struct head *) malloc (sizeof (struct head));
   struct head *auxiliar = (struct head *) malloc (sizeof (struct head));
@@ -8,7 +8,6 @@ agregarLista (struct head *head, int dato)
     {
       head = (struct head *) malloc (sizeof (struct head));
       head->dato = dato;
-      printf ("Se ha llenado la cabeza %d\n", head->dato);
     }
   else
     {
@@ -23,19 +22,18 @@ agregarLista (struct head *head, int dato)
 
 
 struct head *
-eliminarLista (struct head *head)
+pop (struct head *head)
 {
 
   if (head == NULL)
     {
-      printf ("La direccion de memoria no existe");
+      printf ("\n");
     }
   else
     {
       if (head->siguiente == NULL)
 	{
 	  head = NULL;
-	  printf ("Ha vaciado la pila");
 	  return head;
 	}
       else
@@ -48,13 +46,13 @@ eliminarLista (struct head *head)
 }
 
 struct head *
-mostrarLista (struct head *head)
+mostrar (struct head *head)
 {
   struct head *nodo = NULL;
   if (head == NULL)
     {
 
-      printf ("No existe dicha memoria\n");
+      printf ("\n");
     }
   else
     {

@@ -9,7 +9,8 @@ main ()
   do
     {
 
-      printf ("\nQue desea realizar \n1.Push 2.Pop 3.Mostrar 4.Salir \n ");
+      printf
+	("\nQue desea realizar \n1.Agregar 2.Eliminar 3.Mostrar 4.Salir \n ");
 
       scanf ("%d", &opcion);
 
@@ -18,15 +19,15 @@ main ()
 	case 1:
 	  printf ("Ingrese el dato agregar\n");
 	  scanf ("%d", &dato);
-	  head = agregarLista (head, dato);
+	  head = agregarCola (head, dato);
 
 	  break;
 	case 2:
 
-	  head = eliminarLista (head);
+	  head = eliminarCola (head);
 	  break;
 	case 3:
-	  mostrarLista (head);
+	  mostrarCola (head);
 	  break;
 	case 4:
 	  printf ("Saliendo del sistema \n");

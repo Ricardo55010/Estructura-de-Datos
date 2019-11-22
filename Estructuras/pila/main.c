@@ -18,15 +18,15 @@ main ()
 	case 1:
 	  printf ("Ingrese el dato agregar\n");
 	  scanf ("%d", &dato);
-	  head = agregarLista (head, dato);
+	  head = push (head, dato);
 
 	  break;
 	case 2:
 
-	  head = eliminarLista (head);
+	  head = pop (head);
 	  break;
 	case 3:
-	  mostrarLista (head);
+	  mostrar (head);
 	  break;
 	case 4:
 	  printf ("Saliendo del sistema \n");

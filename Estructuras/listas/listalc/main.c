@@ -1,4 +1,4 @@
-#include"listal.h"
+#include"listaCircular.h"
 
 int
 main ()

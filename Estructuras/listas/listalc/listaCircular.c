@@ -1,4 +1,4 @@
-#include"listal.h"
+#include"listaCircular.h"
 struct head *
 agregarLista (struct head *head, int dato)
 {
@@ -7,10 +7,8 @@ agregarLista (struct head *head, int dato)
   if (head == NULL)
     {
       head = (struct head *) malloc (sizeof (struct head));
-      head->siguiente = head;
-      head->anterior = NULL;
       head->dato = dato;
-      printf ("Se ha llenado la cabeza %d\n", head->dato);
+      head->siguiente = head;
     }
   else
     {
@@ -21,9 +19,7 @@ agregarLista (struct head *head, int dato)
 	{
 	  auxiliar = auxiliar->siguiente;
 	}
-      nuevo->anterior = auxiliar;
       auxiliar->siguiente = nuevo;
-      head->anterior = nuevo;
     }
   return head;
 }
@@ -38,14 +34,13 @@ eliminarLista (struct head *head)
   struct head *nodo2 = (struct head *) malloc (sizeof (struct head));
   if (head == NULL)
     {
-      printf ("La direccion de memoria no existe");
+      printf ("\n");
     }
   else
     {
       if (head->siguiente == head)
 	{
 	  head = NULL;
-	  printf ("Ha vaciado la lista");
 	  return head;
 	}
       else
@@ -55,22 +50,20 @@ eliminarLista (struct head *head)
 	  while (nodo->siguiente != head)
 	    {
 	      nodo = nodo->siguiente;
+
 	    }
 	  while (nodo2->siguiente != nodo)
 	    {
 	      nodo2 = nodo2->siguiente;
 	    }
-
 	  nodo2->siguiente = head;
-	  head->anterior = nodo;
+
+
 	  return head;
 	}
     }
-
-
   return head;
 }
-
 
 struct head *
 mostrarLista (struct head *head)
@@ -79,14 +72,13 @@ mostrarLista (struct head *head)
   struct head *nodo2 = NULL;
   if (head == NULL)
     {
-
-      printf ("No existe dicha memoria\n");
+      printf ("\n");
     }
   else
     {
       nodo = head;
       printf ("%d ", nodo->dato);
-      nodo2 = nodo->siguiente;
+      nodo2 = head->siguiente;
       while (nodo2 != head)
 	{
 	  printf ("%d ", nodo2->dato);

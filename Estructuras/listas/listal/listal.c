@@ -8,7 +8,6 @@ agregarLista (struct head *head, int dato)
     {
       head = (struct head *) malloc (sizeof (struct head));
       head->dato = dato;
-      printf ("Se ha llenado la cabeza %d\n", head->dato);
     }
   else
     {
@@ -34,14 +33,13 @@ eliminarLista (struct head *head)
   struct head *nodo2 = (struct head *) malloc (sizeof (struct head));
   if (head == NULL)
     {
-      printf ("La direccion de memoria no existe");
+      printf ("\n");
     }
   else
     {
       if (head->siguiente == NULL)
 	{
 	  head = NULL;
-	  printf ("Ha vaciado la lista");
 	  return head;
 	}
       else
@@ -63,7 +61,7 @@ eliminarLista (struct head *head)
 	  return head;
 	}
     }
-return head;
+  return head;
 }
 
 struct head *
@@ -72,8 +70,7 @@ mostrarLista (struct head *head)
   struct head *nodo = NULL;
   if (head == NULL)
     {
-
-      printf ("No existe dicha memoria\n");
+      printf ("\n");
     }
   else
     {

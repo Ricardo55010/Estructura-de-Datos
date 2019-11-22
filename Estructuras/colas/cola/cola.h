@@ -10,7 +10,7 @@ struct head
 
 };
 
-struct head *agregarLista (struct head *, int);
-struct head *eliminarLista (struct head *);
-struct head *mostrarLista (struct head *);
+struct head *agregarCola (struct head *, int);
+struct head *eliminarCola (struct head *);
+struct head *mostrarCola (struct head *);
 #endif
