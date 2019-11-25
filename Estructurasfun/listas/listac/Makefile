@@ -2,7 +2,7 @@ a.out: main.o listac.o
 	gcc main.o listac.o 
 main.o: main.c
 	gcc -c -Wall main.c
-cita.o: listac.c
+listac.o: listac.c
 	gcc -c -Wall listac.c
 run: a.out
 	./a.out
